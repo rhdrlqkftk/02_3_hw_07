@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Solution{
+   public static void main (String[] args) 
+   {
+      Scanner sc = new Scanner(System.in);
+      int test = sc.nextInt();
+      int a = 0;
+      
+      int arr [] = new int[101];
+      for( int t=1 ;t<=test; t++) {
+         int n= sc.nextInt();
+         
+         for (int i = 0; i < 101; i++) {
+           arr[i] = 0;
+         }    
+         
+         for(int i =0; i<1000; i++) {
+            a = sc.nextInt();
+             arr[a]++;
+         }
+         
+         int Max=0, val =0;
+         for(int i =0; i<= 100;i++) {
+               if( arr[i] >= Max) {
+                  Max = arr[i];
+                  val = i;   
+               }
+         }
+         
+         System.out.println("#" +  t + " "+ val);
+      }
+   }
+}

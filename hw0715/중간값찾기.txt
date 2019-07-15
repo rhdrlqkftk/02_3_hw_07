@@ -1,0 +1,19 @@
+import java.util.*;
+public class Solution{
+   public static void main (String[] args) 
+   {
+       Scanner sc = new Scanner(System.in);
+		int n, a;
+		int arr [] = new int[200];
+		n= sc.nextInt();
+       for(int i = 1 ; i <= n; i++)
+		{
+			 a= sc.nextInt(); 
+			 arr[i]= a;
+		}
+       
+		Arrays.sort(arr);
+        int mid = (n +1) / 2; 
+       System.out.println(arr[mid]);
+   }
+}
