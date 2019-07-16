@@ -1,0 +1,29 @@
+(eclipse font)
+
+1. file -> new -> project
+2. src -> new -> class
+
+// ±¸±Û¸µÀ» ÇÒ ¼ö ÀÖ´Â Å°¿öµå¸¦ ¹è¿ö°¡¾ßÇÑ´Ù. 
+// ÀÚµ¿¿Ï¼º. 
+// print, println(¶ç¾î¾²±â)  
+
+¹®¹ý
+bin ÆÄÀÏ¿¡ »ç¿ëÇÒ ¼ö ÀÖ´Â Å¬·¡½º ÇÔ¼ö°¡ ÀÖ´Ù.  
+
+
+[¹®¹ý]
+syso  + ctrl + space bar
+main +  ctrl + space bar 
+ ctrl + space bar  : ÀÚµ¿¿Ï¼º. 
+ ctrl + F11
+ ctrl + shift + c : ÁÖ¼® Ã³¸® , ÇØÁ¦ 
+ 
+ctrl + d //¶óÀÎ »èÁ¦	
+home , end+ shift  : ÇÑ ¹®Àå »èÁ¦. 
+ctrl + x <-> ctrl + y ( Áö¿î°Å »ì¸®±â ) 
+¼ø¼­ ¹Ù²Ù±â: alt Å° ´©¸£°í À§·Î 
+µé¿©¾²±â Á¤¸® 
+:  ctrl +a,  ctrl + shift + F 
+ 
+
+
