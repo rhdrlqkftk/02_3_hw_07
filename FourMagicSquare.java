@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class FourMagicSquare {
 
-	// ¸â¹ö.
+	// ë©¤ë²„.
 	private int[][] magic;
 	private int n;
 
 	public FourMagicSquare(int n) {
 		magic = new int[n][n];
-		this.n = n; // this.Àº ¸â¹ö¸¦ ÀÇ¹ÌÇÑ´Ù.
+		this.n = n; // this.ì€ ë©¤ë²„ë¥¼ ì˜ë¯¸í•œë‹¤.
 	}
 
 	public FourMagicSquare() 
 	{
-		this(4); // »ı¼ºÀÚ ¿À¹ö·Îµù.
-		// f3À» ´©¸£¸é ±æÀ» ¾Ë·ÁÁØ´Ù.
+		this(4); // ìƒì„±ì ì˜¤ë²„ë¡œë”©.
+		// f3ì„ ëˆ„ë¥´ë©´ ê¸¸ì„ ì•Œë ¤ì¤€ë‹¤.
 	}
 	public void print() {
 	    System.out.println( n +"is magic ?" + isCheck());
 	  //System.out.printf( "%d is magic?",n, isCheck());
-		for (int i = 0; i < magic.length; i++) {// magic.length = n À» ÀÇ¹Ì
+		for (int i = 0; i < magic.length; i++) {// magic.length = n ì„ ì˜ë¯¸
 			for (int j = 0; j < magic.length; j++) {
 				System.out.printf("%d\t", magic[i][j]);
 				// string s = String.format("%d\t",magic[i][j]);
@@ -119,10 +119,10 @@ public class FourMagicSquare {
 		return tot;
 	}
 	// is, has, contains
-	// Java´Â  True¸¦ 1·Î ¾µ¼ö ¾ø´Ù.
+	// JavaëŠ”  Trueë¥¼ 1ë¡œ ì“¸ìˆ˜ ì—†ë‹¤.
 	public static void main(String[] args) {
-		// staticÀº °´Ã¼¸¦ ¾È¾²±â À§ÇÑ °ÍÀÌ´Ù.
-		// nonstaticÀÎ°É È£Ãâ ¸øÇÑ´Ù.
+		// staticì€ ê°ì²´ë¥¼ ì•ˆì“°ê¸° ìœ„í•œ ê²ƒì´ë‹¤.
+		// nonstaticì¸ê±¸ í˜¸ì¶œ ëª»í•œë‹¤.
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		FourMagicSquare odd = new FourMagicSquare(n);
