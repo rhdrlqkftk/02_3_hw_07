@@ -92,7 +92,7 @@ public class Robot {
 
 			}
 
-		} else if (c == 'C')// º®ÀÌ°Å³ª
+		} else if (c == 'C')// ï¿½ï¿½ï¿½Ì°Å³ï¿½
 
 		{
 
@@ -134,7 +134,7 @@ public class Robot {
 
 		Scanner sc = new Scanner(System.in);
 
-		int T = sc.nextInt(); // ÁÖ°ü½Ä ¹®Á¦. (´ë¹®ÀÚ)
+		int T = sc.nextInt(); // ï¿½Ö°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. (ï¿½ë¹®ï¿½ï¿½)
 
 		for (int t = 1; t <= T; t++) {
 
