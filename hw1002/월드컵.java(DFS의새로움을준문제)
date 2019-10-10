@@ -1,0 +1,95 @@
+package ws1010;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+/*
+ * 핵심: 백트래킹 
+ * 정올 : http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=1114&sca=50&page=9
+ * 
+ * 2: 승리, 1: 무승부 , 0: 패. 
+ * */
+public class 월드컵_백준 {
+	//이게 무슨말이여;; 
+	static int[][] games = 
+		    {{0,0,0,0,0,1,1,1,1,2,2,2,3,3,4},
+			 {1,2,3,4,5,2,3,4,5,3,4,5,4,5,5}};
+	static int[][] score;
+	static int[][] result;
+	static boolean flag;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		for (int tc = 0; tc < 4; tc++) {
+			score = new int[6][3];
+			st = new StringTokenizer(br.readLine());
+			
+			for (int i = 0; i < 6; i++) {
+				for (int j = 0; j < 3; j++) {					
+					score[i][j] = Integer.parseInt(st.nextToken());
+				}
+			}
+			result = new int[6][3];
+			flag = false;
+			worldcup(0);
+			if( flag)
+			{
+				System.out.print("1");
+			}
+			else
+			{
+				System.out.print("0");
+			}
+			System.out.print(" ");
+			
+		}
+	}
+	static void worldcup(int cnt) 
+	{
+		if( cnt ==15) // 15번의 경기 승무패를 기록해서 만든 경우의수가 입력받은 승무패와 일치하는지 체크하고 리턴
+		{
+			for( int i =0; i<6; i++)
+			{
+				for(int j=0; j<3; j++)
+				{
+					if(result[i][j] != score[i][j])
+					{
+						flag = false; 
+						return;
+					}
+				}
+			}
+			flag = true;
+			return ; 
+		}
+		int team1 = games[0][cnt]; // 1번팀 
+		int team2 = games[1][cnt]; // 2번팀
+		// 1번 팀의 승수가 남아서 1번 팀 승리, 2번팀의 패로 기록하는 경우. 
+		if( result[team1][0]+1 <= score[team1][0] && result[team2][2]+1 <= score[team2][2] && flag == false)
+		{
+			result[team1][0]++;
+			result[team2][2]++; 
+			worldcup(cnt+1);
+			result[team1][0]--;
+			result[team2][2]--;
+		}
+		if( result[team2][0]+1 <= score[team2][0] && result[team1][2]+1 <= score[team1][2]&& flag == false )
+		{
+			result[team1][2]++; 
+			result[team2][0]++;
+			worldcup(cnt+1);
+			result[team1][2]--;
+			result[team2][0]--;
+		}
+		if(result[team1][1]+1 <= score[team1][1] && result[team2][1]+1 <= score[team2][1]&& flag == false )
+		{
+			result[team1][1]++; 
+			result[team2][1]++;
+			worldcup(cnt+1);
+			result[team1][1]--;
+			result[team2][1]--;
+		}
+	}
+}
