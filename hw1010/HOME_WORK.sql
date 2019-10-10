@@ -31,8 +31,12 @@ INSERT INTO MYEMP(EMP_NO, EMP_NAME, EMP_MGE, HIREDATE, SAL,DEPT_NO) VALUES
 ('1002', 'LEE', '1003','2008-06-25','3000',30),
 ('1003', 'PARK', '1003','2007-11-28','3500',10);
 /* 부서 통합 */
+/*
 UPDATE MYDEPT SET DEPT_NAME = "MANAGEMENT" WHERE DEPT_NAME = "HR"; 
 UPDATE MYDEPT SET DEPT_NO = 50 where dept_no=30;
+*/
+/* 위랑 같은거 */
+UPDATE myemp SET dept_no = (select dept_no from mydept where dept_name = 'MANAGEMENT') where dept_no = (select dept_no from mydept where dept_name = 'HR');
 
 DELETE from MYDEPT WHERE DEPT_NAME = "HR"; 
 
