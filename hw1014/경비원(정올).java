@@ -2,13 +2,13 @@ package ssafy1015;
 
 import java.util.Scanner;
 
-public class °æºñ¿ø {
+public class ê²½ë¹„ì› {
 	static int N,M; 
 	static int sum =0;
 	static int calcu( int a, int b)
 	{
 		int k=0;
-		if( a ==1) // ºÏÀÌ¶ó°í ÇÏ¸é, 
+		if( a ==1) // ë¶ì´ë¼ê³  í•˜ë©´, 
 		{
 			k = b;
 		}
@@ -20,7 +20,7 @@ public class °æºñ¿ø {
 		{
 			k= 2*N+ M +(M-b);
 		}
-		else if(a==4)//µ¿
+		else if(a==4)//ë™
 		{
 			k = N + b; 
 		}
@@ -28,11 +28,11 @@ public class °æºñ¿ø {
 	}
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		N = sc.nextInt(); // °¡·Î
-		M = sc.nextInt(); // ¼¼·Î
+		N = sc.nextInt(); // ê°€ë¡œ
+		M = sc.nextInt(); // ì„¸ë¡œ
 		int len = 2*(N+M);
 		
-		int Num =sc.nextInt(); // »óÁ¡ÀÇ °¹¼ö 
+		int Num =sc.nextInt(); // ìƒì ì˜ ê°¯ìˆ˜ 
 		int arr[] = new int[Num];
 		sum =0;
 		int a, b; 
