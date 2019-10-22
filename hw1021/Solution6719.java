@@ -5,9 +5,9 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.concurrent.PriorityBlockingQueue;
-// ¼º¼öÀÇ ÇÁ·Î±×·¡¹Ö °­ÁÂ ½ÃÃ». 
-// 2Áø¹ı ¿ø¸®¸¦ Àû¿ëÇÏ´Â ¹®Á¦¶ó°í?
-// (A+M)/2 ·Î ½Ç·ÂÀÌ º¯È­ÇÑ´Ù. 
+// ì„±ìˆ˜ì˜ í”„ë¡œê·¸ë˜ë° ê°•ì¢Œ ì‹œì²­. 
+// 2ì§„ë²• ì›ë¦¬ë¥¼ ì ìš©í•˜ëŠ” ë¬¸ì œë¼ê³ ?
+// (A+M)/2 ë¡œ ì‹¤ë ¥ì´ ë³€í™”í•œë‹¤. 
 public class Solution6719 {
 	static int N, K; 
 	static int M[]; 
@@ -27,10 +27,10 @@ public class Solution6719 {
 		{
 			N = sc.nextInt(); 
 			K = sc.nextInt();
-			// ¼º¼öÀÇ ½Ç·ÂÀÌ A¶ó°í ÇÒ¶§, ¼öÁØÀÌ MÀÎ °­ÁÂ¸¦ ½ÃÃ»ÇÏ°í, 
-		    // ¼º¼öÀÇ ½Ç·ÂÀº (A+M)/2°¡ µÈ´Ù.
+			// ì„±ìˆ˜ì˜ ì‹¤ë ¥ì´ Aë¼ê³  í• ë•Œ, ìˆ˜ì¤€ì´ Mì¸ ê°•ì¢Œë¥¼ ì‹œì²­í•˜ê³ , 
+		    // ì„±ìˆ˜ì˜ ì‹¤ë ¥ì€ (A+M)/2ê°€ ëœë‹¤.
 			
-			 //K°³¸¦ ÀûÀıÇÑ ¼ø¼­·Î ¼±ÅÃÇØ ÇÑ ¹ø¾¿ ½ÃÃ». 
+			 //Kê°œë¥¼ ì ì ˆí•œ ìˆœì„œë¡œ ì„ íƒí•´ í•œ ë²ˆì”© ì‹œì²­. 
 			for(int i =0; i < N; i++)
 			{
 				pq.add(sc.nextInt());
