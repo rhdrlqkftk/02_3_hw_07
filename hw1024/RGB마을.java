@@ -2,26 +2,26 @@ package ws1028;
 
 import java.util.Scanner;
 
-public class RGB¸¶À» {
+public class RGBë§ˆì„ {
 	static int N; 	
 	static int Map[][];
 	static int Map1[][];
-	// R G B´Â ÇØ´ç Áı¿¡ »¡, ³ì, ÆÄ ¸¦ Ä¥ÇßÀ» ¶§ ºñ¿ëÀ» ¸»ÇÔ. 
+	// R G BëŠ” í•´ë‹¹ ì§‘ì— ë¹¨, ë…¹, íŒŒ ë¥¼ ì¹ í–ˆì„ ë•Œ ë¹„ìš©ì„ ë§í•¨. 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		N = sc.nextInt(); //ÁıÀÇ °¹¼ö. 
+		N = sc.nextInt(); //ì§‘ì˜ ê°¯ìˆ˜. 
 		Map = new int [N][3];
 		Map1 = new int [N][3];
 		for(int i=0; i <N; i++)
 		{
-			for(int j=0;j<3;j++) // 3°³Áß¿¡ ÇÏ³ª »ö±ò. 
+			for(int j=0;j<3;j++) // 3ê°œì¤‘ì— í•˜ë‚˜ ìƒ‰ê¹”. 
 			{
 				Map[i][j] = sc.nextInt();
 			}
 		}
 		for( int i =0; i < 3; i++ )
 		{
-			// Ã³À½ °ª ¾î¶»°Ô ÇØÁÙ·¡?
+			// ì²˜ìŒ ê°’ ì–´ë–»ê²Œ í•´ì¤„ë˜?
 			dfs(0, i, Map[0][i]);
 		}
 		int min = Integer.MAX_VALUE;
@@ -37,7 +37,7 @@ public class RGB¸¶À» {
 	}
 	static void dfs(int height, int idx, int sum) 
 	{
-		//¾î¶»°Ô ÇÏ¸é ÁÁÀ»±î³ª.. 
+		//ì–´ë–»ê²Œ í•˜ë©´ ì¢‹ì„ê¹Œë‚˜.. 
 		
 		if( Map1[height][idx] !=0 )
 		{
