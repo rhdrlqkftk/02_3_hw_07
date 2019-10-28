@@ -1,80 +1,80 @@
-package ws1028;
-
-import java.util.Scanner;
-
-public class RGB¸¶À» {
-	static int N; 	
-	static int Map[][];
-	static int Map1[][];
-	// R G B´Â ÇØ´ç Áý¿¡ »¡, ³ì, ÆÄ ¸¦ Ä¥ÇßÀ» ¶§ ºñ¿ëÀ» ¸»ÇÔ. 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		N = sc.nextInt(); //ÁýÀÇ °¹¼ö. 
-		Map = new int [N][3];
-		Map1 = new int [N][3];
-		for(int i=0; i <N; i++)
-		{
-			for(int j=0;j<3;j++) // 3°³Áß¿¡ ÇÏ³ª »ö±ò. 
+	package ws1028;
+	
+	import java.util.Scanner;
+	
+	public class RGBë§ˆì„ {
+		static int N; 	
+		static int Map[][];
+		static int visit[][];
+		// R G BëŠ” í•´ë‹¹ ì§‘ì— ë¹¨, ë…¹, íŒŒ ë¥¼ ì¹ í–ˆì„ ë•Œ ë¹„ìš©ì„ ë§í•¨. 
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			N = sc.nextInt(); //ì§‘ì˜ ê°¯ìˆ˜. 
+			Map = new int [N][3];
+			visit= new int [N][3];
+			for(int i=0; i <N; i++)
 			{
-				Map[i][j] = sc.nextInt();
+				for(int j=0;j<3;j++) // 3ê°œì¤‘ì— í•˜ë‚˜ ìƒ‰ê¹”. 
+				{
+					Map[i][j] = sc.nextInt();
+				}
+			}
+			for( int i =0; i < 3; i++ )
+			{
+				// ì²˜ìŒ ê°’ ì–´ë–»ê²Œ í•´ì¤„ëž˜?
+				dfs(0, i, Map[0][i]);
+			}
+			int min = Integer.MAX_VALUE;
+			for(int i =0; i <3; i++)
+			{
+				if (visit[N-1][i] == 0 ) continue; 
+				if( min > visit[N-1][i])
+				{
+					min = visit[N-1][i];
+				}
+			}
+			System.out.println(min);
+		}
+		static void dfs(int height, int idx, int sum) 
+		{
+			//ì–´ë–»ê²Œ í•˜ë©´ ì¢‹ì„ê¹Œë‚˜.. 
+			
+			if( visit[height][idx] !=0 )
+			{
+				if( visit[height][idx] >sum )
+				{
+					visit[height][idx] = sum; 
+				}
+				else
+				{
+					return ; 
+				}
+			}
+			else 
+			{
+				visit[height][idx] = sum;
+			}
+			if( height >= N-1) return;
+			if( idx == 0)
+			{
+				dfs( height+1, 1, sum + Map[height+1][1]);
+				dfs( height+1, 2, sum + Map[height+1][2]);
+			}
+			else if( idx == 1)
+			{
+				dfs( height+1, 0, sum + Map[height+1][0]);
+				dfs( height+1, 2, sum + Map[height+1][2]);
+			}
+			else if( idx == 2)
+			{
+				dfs(  height+1, 0,sum + Map[height+1][0]);
+				dfs(  height+1, 1,sum + Map[height+1][1]);
 			}
 		}
-		for( int i =0; i < 3; i++ )
-		{
-			// Ã³À½ °ª ¾î¶»°Ô ÇØÁÙ·¡?
-			dfs(0, i, Map[0][i]);
-		}
-		int min = Integer.MAX_VALUE;
-		for(int i =0; i <3; i++)
-		{
-			if (Map1[N-1][i] == 0 ) continue; 
-			if( min > Map1[N-1][i])
-			{
-				min = Map1[N-1][i];
-			}
-		}
-		System.out.println(min);
 	}
-	static void dfs(int height, int idx, int sum) 
-	{
-		//¾î¶»°Ô ÇÏ¸é ÁÁÀ»±î³ª.. 
-		
-		if( Map1[height][idx] !=0 )
-		{
-			if( Map1[height][idx] >sum )
-			{
-				Map1[height][idx] = sum; 
-			}
-			else
-			{
-				return ; 
-			}
-		}
-		else 
-		{
-			Map1[height][idx] = sum;
-		}
-		if( height >= N-1) return;
-		if( idx == 0)
-		{
-			dfs( height+1, 1, sum + Map[height+1][1]);
-			dfs( height+1, 2, sum + Map[height+1][2]);
-		}
-		else if( idx == 1)
-		{
-			dfs( height+1, 0, sum + Map[height+1][0]);
-			dfs( height+1, 2, sum + Map[height+1][2]);
-		}
-		else if( idx == 2)
-		{
-			dfs(  height+1, 0,sum + Map[height+1][0]);
-			dfs(  height+1, 1,sum + Map[height+1][1]);
-		}
-	}
-}
-/*
-3
-1 100 100
-100 100 100
-1 100 100
-*/
+	/*
+	3
+	1 100 100
+	100 100 100
+	1 100 100
+	*/
