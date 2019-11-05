@@ -2,7 +2,7 @@ package ws1104;
 
 import java.util.Scanner;
 
-public class ¿µÈ­°¨µ¶¼ò 
+public class ì˜í™”ê°ë…ìˆŒ 
 {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) 
