@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Å»Ãâ {
+public class íƒˆì¶œ {
 	static int R, C; 
 	static int dx[] = {0,1,0,-1};
 	static int dy[] = {1,0,-1,0}; 
@@ -44,7 +44,7 @@ public class Å»Ãâ {
 			for (int j = 0; j < s.length(); j++) 
 			{
 				Map[i][j] = s.charAt(j);
-				if(Map[i][j]== 'S') // °í½¿µµÄ¡°¡ start
+				if(Map[i][j]== 'S') // ê³ ìŠ´ë„ì¹˜ê°€ start
 				{
 					st.add(new pair(i,j));
 					Map[i][j]= '.';
@@ -77,7 +77,7 @@ public class Å»Ãâ {
 					}
 				}
 			}
-			//////// ÀÌ·¯¸é ¹°À» ¸ÕÀú Ã¤¿öÁÖ¾ú°í.  
+			//////// ì´ëŸ¬ë©´ ë¬¼ì„ ë¨¼ì € ì±„ì›Œì£¼ì—ˆê³ .  
 			int bsize = st.size();  
 			for(int ti =0; ti<bsize;ti++)
 			{
