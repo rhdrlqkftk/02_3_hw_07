@@ -1,10 +1,10 @@
 package ws1111;
 
 import java.util.Scanner;
-//left, right ³ª´©°í,
-//¼ø¼­ Á¤ÇØÁÖ°í. 
-//µÎ°³¸¸ÇÏ¸éµÇ³×. 
-public class ¾çÆÈÀú¿ï {
+//left, right ë‚˜ëˆ„ê³ ,
+//ìˆœì„œ ì •í•´ì£¼ê³ . 
+//ë‘ê°œë§Œí•˜ë©´ë˜ë„¤. 
+public class ì–‘íŒ”ì €ìš¸ {
 	static Scanner sc=  new Scanner(System.in);	
 	static int N,sum;
 	static int R, L ,Count;
@@ -19,7 +19,7 @@ public class ¾çÆÈÀú¿ï {
 			Count =0;
 			Ch = new int[N];
 			Chv= new boolean[N];
-			Num = new int[N]; //³Ñ¹ö¸µ ÇÒ ¼ıÀÚ.
+			Num = new int[N]; //ë„˜ë²„ë§ í•  ìˆ«ì.
 			for(int i =0; i<N;i++)
 			{
 				Ch[i] = sc.nextInt(); 
